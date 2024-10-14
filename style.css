@@ -39,12 +39,13 @@ header {
 header a {
   font-size: 1.5rem;
   color: var(--off-white);
-    transition: color 0.3s ease; 
-  }
+  transition: color 0.3s ease;
+}
   
-  header a:hover {
-    color: red; 
-  }
+header a:hover {
+  color: red; 
+  animation: grow 0.3s forwards;
+}
   
 /* end header link animations */
 
@@ -53,8 +54,10 @@ main a {
   color: var(--danger-color);
   transition: color 0.3s ease;
 }
+
 main a:hover {
   color: green;
+  animation: underline 0.3s;
 }
 /* end article link transitions */
 
@@ -114,6 +117,7 @@ section.hero > button {
 }
 section.hero button:hover {
   background-color: blue;
+  animation: bounce 0.5s;
 }
 main article {
   padding: 48px 96px;
@@ -139,4 +143,33 @@ footer {
   text-transform: uppercase;
   padding: 24px 0;
   color: var(--off-white);
+}
+
+/* CSS Animations */
+
+@keyframes grow {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes underline {
+  0% {
+    text-decoration: none;
+  }
+  100% {
+    text-decoration: underline;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
