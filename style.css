@@ -39,12 +39,22 @@ header {
 header a {
   font-size: 1.5rem;
   color: var(--off-white);
-}
+    transition: color 0.3s ease; 
+  }
+  
+  header a:hover {
+    color: red; 
+  }
+  
 /* end header link animations */
 
 /* article link transitions */
 main a {
   color: var(--danger-color);
+  transition: color 0.3s ease;
+}
+main a:hover {
+  color: green;
 }
 /* end article link transitions */
 
@@ -100,8 +110,11 @@ section.hero > button {
   border-radius: 12px;
   text-transform: uppercase;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
-
+section.hero button:hover {
+  background-color: blue;
+}
 main article {
   padding: 48px 96px;
 }
